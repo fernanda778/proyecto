@@ -1,0 +1,18 @@
+/*efectivo*/
+body {
+    background: rgb(212, 144, 81);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 20px;
+}
+.input-group {
+    margin: 15px 0;
+}
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

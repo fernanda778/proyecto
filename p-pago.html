@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <h1>Método de Pago</h1>
+    <p>Total a pagar: $<span id="totalPrice">0</span></p>
+
+    <script>
+        const totalPrice = localStorage.getItem('totalPrice'); 
+        // Mostramos el total recuperado o "0" si no se encontró
+        document.getElementById('totalPrice').textContent = totalPrice || "0";
+    </script>
+
+    <!-- Selección del método de pago -->
+    <div>
+        <label>
+            <input type="radio" name="payment-method" value="efectivo"> Efectivo
+        </label><br>
+        <label>
+            <input type="radio" name="payment-method" value="tarjeta"> Tarjeta
+        </label><br>
+    </div>
+    <button onclick="processPayment()">Ir a la página de pago</button>
+    <button onclick="resetForm()">Borrar</button>
+    <button onclick="regre()">Regresar</button>
+    
+    <script>
+    function updateTotal() { 
+        const total = pizzaPrice + complementPrice + deliveryPrice;
+        document.getElementById('totalPrice').textContent = total.toFixed(2);
+        document.getElementById('result').style.display = 'block'; 
+    }
+
+    </script>
+    <script>
+        function processPayment() {
+            const paymentMethods = document.getElementsByName('payment-method');
+            let selectedMethod = null;
+            paymentMethods.forEach(method => {
+                if (method.checked) {
+                    selectedMethod = method.value;
+                }
+            });
+            if (selectedMethod === 'efectivo') {
+                window.location.href = 'p-efec.html'; 
+            } else if (selectedMethod === 'tarjeta') {
+                window.location.href = 'p-targe.html'; 
+            } else {
+                alert("Por favor, selecciona un método de pago.");
+            }
+        }
+        function resetForm() {
+            document.querySelectorAll('input').forEach(input => input.checked = false);
+        }
+        function regre() {
+            window.location.href = 'p-menu.html'; 
+        }
+    </script>
+    <div class="ima">
+    <img src="image/pago.jpg" alt="una imagen graciosa" style="width: 200px;"
+    height="100px">
+</div>
+</body>
+</html>
+
+

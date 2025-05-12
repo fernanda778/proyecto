@@ -1,0 +1,138 @@
+:root {
+    --pink: #ff69b4;
+}
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: initial;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #44656e;
+    padding: 2rem 9%;   
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 3rem;
+    color: #313131;
+    font-weight: bolder;
+}
+header .logo span{
+    color: var(--pink);
+}
+header .navbar {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: clip-path 0.3s ease-in-out;
+}
+
+header #toggler:checked ~ .navbar {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+header .navbar a {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #0b2022;
+}
+header .navbar a:hover {
+    color: var(--pink);
+}
+header .icons a {
+    font-size: 2.5rem;
+    color: #7518da;
+    margin-left: 1.5rem;
+}
+header .iconos a:hover { 
+    color: var(--pink); 
+}
+header #toggler{
+    display: none;
+}
+header .fa-bars{
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border:.1rem solid rgba(0, 0, 0, .3);
+    display: none;
+}
+body {
+    margin: 0; padding: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    font-family: Geneva;
+    text-align: center;
+    color: white;
+}
+
+.p {
+    background-color: dimgrey;
+}
+section {
+    padding: 30px 40px; 
+}
+.ini, .cono {
+    text-transform: none;
+    background-color: rgba(0, 0, 0, 0.826);
+    border-radius: 20px; padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
+    font-size: 2rem;
+}
+
+.form-container {
+    max-width: 50%;
+    margin: auto;
+}
+.img-container {
+    text-align: center;
+    padding: 30px 40px;
+}
+
+.img-container img {
+    width: 100%;
+    max-width: 400px;
+    height: auto; border-radius: 10px;
+}
+
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    header {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header .fa-bars {
+        display: block;
+    }
+}
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}

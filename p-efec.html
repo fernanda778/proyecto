@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Método de Pago en Efectivo</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style5.css">
+</head>
+<body>
+    <h1>PAGO EN EFECTIVO</h1>
+    <p>Total a pagar: $<span id="totalPrice">0</span></p>
+
+    <script>
+        const totalPrice = localStorage.getItem('totalPrice'); 
+        document.getElementById('totalPrice').textContent = totalPrice || "0";
+    </script>
+    <div id="cash-section" class="hidden">
+        <div class="input-group">
+            <label>Monto dado: $</label>
+            <input type="number" id="monto" placeholder="Monto dado">
+        </div>
+        <div class="input-group">
+            <label>Cambio: $</label>
+            <input type="text" id="change" placeholder="Cambio" readonly>
+        </div>
+        <button onclick="calculateChange()">Calcular</button>
+    </div>
+
+
+
+    <script>
+    function calculateChange() {
+            const amount = parseFloat(document.getElementById('totalPrice').textContent) || 0; 
+            const cashGiven = parseFloat(document.getElementById('monto').value) || 0; 
+
+            if (cashGiven < amount) {
+                document.getElementById('change').value = "Monto insuficiente"; 
+            } else {
+                const change = cashGiven - amount; 
+                document.getElementById('change').value = change.toFixed(2); }
+        }
+    </script>
+
+
+
+    <script>
+function bor() {
+    document.querySelectorAll('input').forEach(input => input.value = ""); // Limpia todos los inputs
+    document.getElementById('cash-section').classList.add('hidden'); // Oculta la sección de efectivo
+}
+function regresar() {
+    window.location.href = 'p-pago.html'; 
+}
+</script>
+    <button onclick="bor()">Borrar</button>
+    <button onclick="regresar()">Regresar</button>
+</body>
+</html>

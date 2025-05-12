@@ -1,0 +1,109 @@
+/*pedido*/
+body {
+    background-image: url('image/2do_fonfo.jpg '); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: top;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 10px;
+}
+
+.cua{
+    background: rgb(135, 190, 218);
+    text-align: center;
+    padding: 0px 0 15px 10px;
+    width: 600px;
+    margin:auto;
+}
+#piz3, #piz2, #piz1{
+    appearance: none; /* Elimina el diseño predeterminado del navegador */
+    background-color: #f4f4f4;
+    border: 2px solid #ccc;
+    border-radius: 8px; padding: 10px;
+    margin: 10px;
+    font-size: 1rem; width: 220px; 
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#piz3, #piz2, #piz1:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+#piz3, #piz2, #piz1 option {
+    padding: 10px;
+    background: #fff;
+    font-size: 1rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column; gap: 1px; 
+}
+.input-group {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    gap: 10px; width: 100%; }
+.input-group label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f4f4f4;
+    padding: 10px; width: 200px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.input-group input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+.input-group label:hover {
+    background-color: #e0e0e0; 
+    transform: scale(1.); 
+}
+
+.input-group input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1); 
+}
+.informacion-boton {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los botones se ajusten en diferentes tamaños de pantalla */
+    gap: 10px; /* Espacio entre los botones */
+    justify-content: center; /* Centra los botones horizontalmente */
+}
+
+.informacion-boton button {
+    padding: 12px 20px;
+    background-color: orange;
+    border: 2px solid orange;
+    color: cornsilk;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.informacion-boton button:hover {
+    background-color: orange;
+    transform: scale(1.05);
+}
+.btn {
+    background: linear-gradient(45deg, #ffc169, #f37b0a); /* Estilo especial */
+    border: 2px solid #ffa94d;
+    color: white;
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, hsl(37, 100%, 53%), orange );
+}

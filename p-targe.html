@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Método de Pago con Tarjeta</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style4.css">
+</head>
+
+<body>
+    <h1>PAGO CON TARJETA</h1>
+    <p>Total a pagar: $<span id="totalPrice">0</span></p>
+
+    <script>
+        // Recuperamos el total guardado en Local Storage
+        const totalPrice = localStorage.getItem('totalPrice'); 
+        // Mostramos el total recuperado o "0" si no se encontró
+        document.getElementById('totalPrice').textContent = totalPrice || "0";
+    </script>
+
+    <!-- Sección de pago con tarjeta -->
+    <div id="card-section">
+        <div class="input-group">
+            <label>Número de tarjeta:</label>
+            <input type="text" id="card-number" placeholder="XXXX-XXXX-XXXX-XXXX">
+        </div>
+    </div>
+
+    <!-- Contenedor para mensajes de estado -->
+    <div id="statusMessage" style="margin-top: 10px; color: red;"></div>
+
+    <!-- Botones generales -->
+    <button onclick="limpiar()">Borrar</button>
+    <button onclick="processCardPayment()">Pagar</button>
+    <button onclick="regre()">Regresar</button>
+
+    <script>
+        // Simulamos un saldo en la tarjeta de crédito
+        const simulatedCardBalance = 600;
+
+        // Procesa el pago con tarjeta de crédito
+        function processCardPayment() {
+            const amount = parseFloat(document.getElementById('totalPrice').textContent) || 0; 
+            const statusMessage = document.getElementById('statusMessage');
+
+            if (simulatedCardBalance < amount) {
+                statusMessage.textContent = "Saldo insuficiente";
+            } else {
+                statusMessage.textContent = "Pago realizado";
+                statusMessage.style.color = "green"; // Cambiar color para éxito
+            }
+        }
+
+        // Limpia todos los campos
+        function limpiar() {
+            document.querySelectorAll('input').forEach(input => input.value = "");
+            document.getElementById('statusMessage').textContent = "";
+        }
+
+        // Redirige a otra página
+        function regre() {
+            window.location.href = 'p-pago.html';
+        }
+    </script>
+</body>
+</html>
+
+
