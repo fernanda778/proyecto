@@ -1,109 +1,114 @@
-/*pedido*/
+
 body {
-    background-image: url('image/2do_fonfo.jpg '); 
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-position: top;
     font-family: Arial, sans-serif;
+    background-image: url('image/2do_fonfo.jpg '); 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+    margin: 0; padding: 20px;
     text-align: center;
-    margin: 10px;
 }
 
-.cua{
-    background: rgb(135, 190, 218);
-    text-align: center;
-    padding: 0px 0 15px 10px;
-    width: 600px;
-    margin:auto;
-}
-#piz3, #piz2, #piz1{
-    appearance: none; /* Elimina el diseño predeterminado del navegador */
-    background-color: #f4f4f4;
-    border: 2px solid #ccc;
-    border-radius: 8px; padding: 10px;
-    margin: 10px;
-    font-size: 1rem; width: 220px; 
-    cursor: pointer;
-    text-align: center;
-    transition: background 0.3s, transform 0.2s;
+h1 {
+    color: #d9534f;
+    font-size: 28px;
 }
 
-#piz3, #piz2, #piz1:hover {
-    background-color: #e0e0e0;
-    transform: scale(1.05);
+h2 {
+    color: #5bc0de;
+    font-size: 22px;
+    margin-top: 20px;
 }
 
-#piz3, #piz2, #piz1 option {
-    padding: 10px;
-    background: #fff;
-    font-size: 1rem;
-}
-
-.input-group {
-    display: flex;
-    flex-direction: column; gap: 1px; 
-}
-.input-group {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: center;
-    gap: 10px; width: 100%; }
-.input-group label {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #f4f4f4;
-    padding: 10px; width: 200px;
-    border: 2px solid #ccc;
+.cua {
+    background-color: #ffffff;
+    padding: 20px;
     border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-.input-group input[type="checkbox"] {
-    margin-right: 10px;
-    transform: scale(1.2);
-}
-.input-group label:hover {
-    background-color: #e0e0e0; 
-    transform: scale(1.); 
-}
-
-.input-group input[type="checkbox"] {
-    margin-right: 10px;
-    transform: scale(1); 
-}
-.informacion-boton {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los botones se ajusten en diferentes tamaños de pantalla */
-    gap: 10px; /* Espacio entre los botones */
-    justify-content: center; /* Centra los botones horizontalmente */
+.datos-cliente, .p1, .p2, .p3, .input-group, .input--group {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 60%;
+    margin-bottom: 15px;
 }
 
-.informacion-boton button {
-    padding: 12px 20px;
-    background-color: orange;
-    border: 2px solid orange;
-    color: cornsilk;
-    border-radius: 10px;
-    font-weight: 700;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
 }
 
-.informacion-boton button:hover {
-    background-color: orange;
-    transform: scale(1.05);
+input, select {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
-.btn {
-    background: linear-gradient(45deg, #ffc169, #f37b0a); /* Estilo especial */
-    border: 2px solid #ffa94d;
+
+button {
+    background-color: #5cb85c;
     color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 16px;
 }
 
-.btn:hover {
-    background: linear-gradient(45deg, hsl(37, 100%, 53%), orange );
+button:hover {
+    background-color: #4cae4c;
+}
+
+.result {
+    font-size: 20px;
+    background-color: #dff0d8;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.informacion-boton {
+    margin-top: 20px;
+}
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+}
+@media (max-width: 505px) {
+label{
+    font-size: 3rem;
+}
+}
+
+@media (max-width: 768px) {
+.datos-cliente, .p1, .p2, .p3, .input-group {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem;
+    }
+label{
+    font-size: 3rem;
+}
+
+    .home .cont {
+        max-width: 90%;
+        padding: 3rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
 }
