@@ -20,8 +20,10 @@
     <!-- Sección de pago con tarjeta -->
     <div id="card-section">
         <div class="input-group">
-            <label>Número de tarjeta:</label>
-            <input type="text" id="card-number" placeholder="XXXX-XXXX-XXXX-XXXX">
+        <label>Número de tarjeta:</label>
+        <input type="text" id="card-number" placeholder="XXXX-XXXX-XXXX-XXXX" maxlength="19"><br>
+        <label for="card-cvv">Código de Seguridad (CVV):</label>
+<input type="text" id="card-cvv" placeholder="XXX" maxlength="3">
         </div>
     </div>
 
@@ -34,10 +36,7 @@
     <button onclick="regre()">Regresar</button>
 
     <script>
-        // Simulamos un saldo en la tarjeta de crédito
         const simulatedCardBalance = 600;
-
-        // Procesa el pago con tarjeta de crédito
         function processCardPayment() {
             const amount = parseFloat(document.getElementById('totalPrice').textContent) || 0; 
             const statusMessage = document.getElementById('statusMessage');
@@ -49,6 +48,18 @@
                 statusMessage.style.color = "green"; // Cambiar color para éxito
             }
         }
+document.getElementById("card-number").addEventListener("input", function(event) {
+        let value = event.target.value.replace(/\D/g, ""); // Elimina caracteres no numéricos
+        value = value.replace(/(\d{4})/g, "$1-").slice(0, 19); // Aplica formato XXXX-XXXX-XXXX-XXXX
+        event.target.value = value;
+    });
+
+    // Validación para código de seguridad (CVV)
+    document.getElementById("card-cvv").addEventListener("input", function(event) {
+        let value = event.target.value.replace(/\D/g, ""); // Elimina caracteres no numéricos
+        event.target.value = value.slice(0, 3); // Limita a 3 caracteres
+    });
+
 
         // Limpia todos los campos
         function limpiar() {
@@ -63,5 +74,8 @@
     </script>
 </body>
 </html>
+
+
+
 
 
