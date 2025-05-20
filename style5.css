@@ -1,18 +1,79 @@
-/*efectivo*/
+/* Estilos generales */
 body {
-    background: rgb(212, 144, 81);
-    font-family: Arial, sans-serif;
+    font-family: "Arial", sans-serif;
+    background-color: #fce4ec; /* Rosa pastel */
     text-align: center;
-    margin: 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 20px;
+    padding: 20px;
 }
+
+/* Título principal */
+h1 {
+    color: #d81b60; /* Rosa intenso */
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* Sección del total */
+p {
+    font-size: 20px;
+    color: #6a1b9a; /* Morado pastel */
+}
+
+/* Contenedor de la sección de pago */
+#cash-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 50%;
+    margin-top: 20px;
+}
+
+/* Grupo de inputs */
 .input-group {
-    margin: 15px 0;
+    margin-bottom: 15px;
 }
-button {
-    margin: 5px;
-    padding: 10px 20px;
+
+label {
     font-size: 16px;
+    font-weight: bold;
+    color: #6a1b9a;
+}
+
+/* Inputs */
+input {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #ba68c8; /* Morado claro */
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+input::placeholder {
+    color: #b39ddb; /* Morado pastel */
+}
+
+/* Botones */
+button {
+    background-color: #ff80ab; /* Rosa pastel */
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 5px;
     cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #f06292; /* Rosa más fuerte */
+}
+
+/* Mensaje de resultado */
+#change {
+    font-weight: bold;
+    color: #d81b60;
 }
