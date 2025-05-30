@@ -1,0 +1,128 @@
+:root {
+    --pink: #0c0c0c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: initial;
+    transition: .2s linear;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.9);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: rgb(1, 1, 1);
+}
+
+/* Sección Home */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('image/pizz_pepero.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .cont {
+    max-width: 70rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+.home .cont h1 {
+    font-size: 6rem;
+    color: var(--pink);
+}
+.home .cont h3 {
+    font-size: 4rem;
+    color: var(--pink);
+}
+.home .cont span {
+    font-size: 1.5rem;
+    color: var(--pink);
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.home .cont p {
+    font-size: 1.2rem;
+    color: black;
+    padding: 1rem;
+}
+.home .cont .controls {
+    font-size: 2rem;
+    color: #060505;
+    padding: 1rem;
+} 
+.home .cont .boton{
+    font-size: 2rem;
+}
+
+.th {
+    position: fixed;
+    bottom: 20px;  right: 20px; padding: 1rem 1.5rem;
+    background: #ff9969;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    transition: 0.3s ease-in-out;
+}
+.th:hover {
+    background: #ff4d94;
+}
+    .thi {
+    position: fixed;
+    bottom: 20px;  left: 20px; padding: 1rem 1.5rem;
+    background: #ff9969;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    transition: 0.3s ease-in-out;
+}
+.thi:hover {
+    background: rgba(133, 77, 255, 0.5);
+}
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem;
+    }
+
+    .home .cont {
+        max-width: 90%;
+        padding: 3rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
+

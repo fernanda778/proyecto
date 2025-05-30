@@ -1,0 +1,169 @@
+:root {
+    --pink: #ff69b4;
+    --dark-pink: #d85799;
+    --light-pink: #ff85c0;
+    --background: rgba(0, 0, 0, 0.9);
+    --header-bg: #44656e;
+    --shadow: rgba(0, 0, 0, 0.2);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+body {
+    background: url('image/i-gato.jpg') no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    color: var(--text-light);
+}
+
+/* Contenedor principal */
+.contenedor {
+    padding-bottom: 20px;
+}
+header {
+    background-color: violet;
+    padding: 1.5rem 9%;
+    position: fixed;
+    top: 0; left: 0;right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 4px 8px var(--shadow);
+}
+.navbar {
+    display: flex;
+    gap: 2rem;
+}
+header .navbar a  {
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    color: #8e68cc;
+    text-decoration: none;
+    border-radius: 5px;
+}
+header .navbar a:hover {
+    background-color: var(--pink);
+    color: black;
+}
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .cont {
+    max-width: 70rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+.boton{
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    color: #8e68cc;
+    border-radius: 5px;
+}
+.boton a:hover{
+    background-color: var(--pink);
+    color: black;
+}
+/* Títulos y textos */
+.home .cont h1 {
+    font-size: 6rem;
+    color: var(--pink);
+}
+
+.home .cont label {
+    font-size: 3rem;
+    color: black;
+}
+
+.home .cont span {
+    font-size: 1.5rem;
+    color: var(--pink);
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+/* Ajuste responsive */
+@media (min-width: 992px) {
+    html {
+        font-size: 100%;
+    }
+
+    .home {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding: 5rem;
+    }
+
+    .home .cont {
+        max-width: 80%;
+        padding: 4rem;
+    }
+.navbar {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+}
+@media (max-width: 991px) {
+    html {
+        font-size: 50%;
+    }
+}
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem;
+    }
+    .home .cont {
+        max-width: 90%;
+        padding: 3rem;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    label{
+        font-size: 1rem;
+    }
+}
+
+/*--pastel-pink: #ff6f91;
+    --pastel-purple: #845ec2;
+    --pastel-green: #008f7a;
+    --text-dark: #333;
+    --text-light: #fff;
+    :root {
+    --pink: #ff69b4;
+    --dark-pink: #d85799;
+    --light-pink: #ff85c0;
+    --background: rgba(0, 0, 0, 0.9);
+    --header-bg: #44656e;
+    --shadow: rgba(0, 0, 0, 0.2);
+*/

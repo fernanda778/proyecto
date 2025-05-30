@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="xam.css">
+</head>
+<body>
+<style>
+    body {
+background: url('image/i-er.jpg') no-repeat;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+    text-align: center;
+    margin-top: 120px;
+}
+</style>
+<header>
+    <nav class="navbar">
+        <div>
+            <a href="#" class="th" id="regresar">Regresar</a>
+        </div>
+    </nav>
+</header>
+
+<h1 class="page-title">NATURALEZA</h1>
+
+<main class="poem">
+    <div class="pom">
+<article class="poema-item">
+    <h1>PERDIDO</h1>
+<p>Al verte, siento que he perdido algo, pero mientras pueda 
+ver esa sonrisa que un día anhelé, sé que estaré bien.</p>
+<div class="info">
+    <button type="button" class="printButton">Imprimir</button>
+</div>
+</article>
+
+<article class="poema-item">
+    <h1>LUNA</h1>
+<p>Cada día pienso en ti al punto de ya no saber lo que por
+ti siento. El sentirme perdido en los recuerdos me hace anhelar regresar el tiempo y así curar las heridas que te he hecho, pero al ver la luna, tan hermosa pero distante, me repite que no debo intentar recuperar lo que nunca supe valorar.</p>
+<div class="info">
+    <button type="button" class="printButton">Imprimir</button>
+</div>
+</article>
+
+<article class="poema-item">
+    <h1>CORAZÓN ETERNO</h1>
+<p>Te amo, no con el corazón, sino con el alma, porque el corazón se detiene y el alma no. El alma es eterna, como mi amor por ti.</p>
+<div class="info">
+    <button type="button" class="printButton">Imprimir</button>
+</div>
+</article>
+
+<article class="poema-item">
+    <h1>CORAZÓN ETERNO</h1>
+<p>Te amo, no con el corazón, sino con el alma, porque el corazón se detiene y el alma no. El alma es eterna, como mi amor por ti.</p>
+<div class="info">
+    <button type="button" class="printButton">Imprimir</button>
+</div>
+</article>
+
+    </div>
+</main>
+
+<script>
+    document.getElementById("regresar").addEventListener("click", function(event) {
+        event.preventDefault();
+        window.location.href = "l-emp.html";
+    });
+
+    document.querySelectorAll(".printButton").forEach(button => {
+        button.addEventListener("click", function () {
+            let poema = this.closest(".poema-item");
+            let poemaTitulo = poema.querySelector("h1").innerHTML;
+            let poemaTexto = poema.querySelector("p").innerHTML;
+
+            let printWindow = window.open('', '', 'height=500,width=800');
+            printWindow.document.write('<html><head><title>Impresión</title><style>');
+            printWindow.document.write('body { font-family: Arial, sans-serif; text-align: center; background-color: #f0f8ff; }');
+            printWindow.document.write('h1 { color: #4b0082; }');
+            printWindow.document.write('p { color: #2c3e50; font-size: 18px; }');
+            printWindow.document.write('</style></head><body>');
+            printWindow.document.write('<h1>' + poemaTitulo + '</h1>');
+            printWindow.document.write('<p>' + poemaTexto + '</p>');
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+
+            // Espera un momento antes de abrir la ventana de impresión
+            setTimeout(() => {
+                printWindow.print();
+                printWindow.close();
+            }, 500);
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="xam.css">
+</head>
+<body>
+<style>
+    body {
+background: url('image/det.jpg') no-repeat;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+    text-align: center;
+    margin-top: 120px;
+}
+</style>
+<header>
+    <nav class="navbar">
+        <div>
+            <a href="#" class="th" id="regresar">Regresar</a>
+        </div>
+    </nav>
+</header>
+
+<h1 class="page-title">DETERMINACION</h1>
+
+<main class="poem">
+    <div class="pom">
+<article class="poema-item">
+    <h1>Lagrima</h1>
+<p>Nunca llores, aunque te sientas arrepentido, no importa cuan miserable
+seas o lo avergonzado que estes, siempre sigue hacia delante.
+</p>
+<div class="info">
+    <button type="button" class="printButton">Imprimir</button>
+</div>
+</article>
+
+<article class="poema-item">
+    <h1>Pasos</h1>
+<p>A veces las buenas personas toman malas decisiones, 
+eso no significa que sean malos, significa que son humanas, 
+lo que tambien aplica para ti, nadie es perfecto siendo una persona
+</p>
+<div class="info">
+    <button type="button" class="printButton">Imprimir</button>
+</div>
+</article>
+
+<article class="poema-item">
+    <h1>Pizca</h1>
+<p>El infierno se escribio para ser una tortura, pero si prestas atencion
+puede ser divertido, si estas con el demonio correcto.
+</p>
+<div class="info">
+    <button type="button" class="printButton">Imprimir</button>
+</div>
+</article>
+
+<article class="poema-item">
+    <h1>Tiempo</h1>
+<p>Algun dia todo tendra sentido, aunque pareciera que caminas sin rumbo,
+por ahora, riete ante la confucion, sonrie a traves de las lagrimas
+y recuerda que todo pasa por algo
+</p>
+<div class="info">
+    <button type="button" class="printButton">Imprimir</button>
+</div>
+</article>
+
+    </div>
+</main>
+
+<script>
+    document.getElementById("regresar").addEventListener("click", function(event) {
+        event.preventDefault();
+        window.location.href = "l-emp.html";
+    });
+
+    document.querySelectorAll(".printButton").forEach(button => {
+        button.addEventListener("click", function () {
+            let poema = this.closest(".poema-item");
+            let poemaTitulo = poema.querySelector("h1").innerHTML;
+            let poemaTexto = poema.querySelector("p").innerHTML;
+
+            let printWindow = window.open('', '', 'height=500,width=800');
+            printWindow.document.write('<html><head><title>Impresión</title><style>');
+            printWindow.document.write('body { font-family: Arial, sans-serif; text-align: center; background-color: #f0f8ff; }');
+            printWindow.document.write('h1 { color: #4b0082; }');
+            printWindow.document.write('p { color: #2c3e50; font-size: 18px; }');
+            printWindow.document.write('</style></head><body>');
+            printWindow.document.write('<h1>' + poemaTitulo + '</h1>');
+            printWindow.document.write('<p>' + poemaTexto + '</p>');
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+
+            // Espera un momento antes de abrir la ventana de impresión
+            setTimeout(() => {
+                printWindow.print();
+                printWindow.close();
+            }, 500);
+        });
+    });
+</script>
+
+</body>
+</html>

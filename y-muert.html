@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="xam.css">
+</head>
+<body>
+<style>
+    body {
+background: url('image/i-esque.jpg') no-repeat;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+    text-align: center;
+    margin-top: 120px;
+}
+</style>
+<header>
+    <nav class="navbar">
+        <div>
+            <a href="#" class="th" id="regresar">Regresar</a>
+        </div>
+    </nav>
+</header>
+
+<h1 class="page-title">MUERTE </h1>
+
+<main class="poem">
+    <div class="pom">
+<article class="poema-item">
+    <h1>Hermosa</h1>
+<p>El oro es valioso porque es raro,<br> el diamente es valioso por su brillo,<br>
+la vida es valiosa porque es breve, <br>la muerte da valor a la vida.
+</p>
+<div class="info">
+    <button type="button" class="printButton">Imprimir</button>
+</div>
+</article>
+
+<article class="poema-item">
+    <h1>Cubre tu vista</h1>
+<p>Lo malo de ser una persona observadora es que a veces terminas entendiendo
+y notando cosas que era mejor no saber.
+</p>
+<div class="info">
+    <button type="button" class="printButton">Imprimir</button>
+</div>
+</article>
+
+<article class="poema-item">
+    <h1>Temor</h1>
+<p>Hay personas que temen de su final, pero yo solo le temo a la 
+muerte de otros, para mi la verdadera muerte es solo sintoma de que hubo vida </p>
+<div class="info">
+    <button type="button" class="printButton">Imprimir</button>
+</div>
+</article>
+
+<article class="poema-item">
+    <h1>Baile</h1>
+<p>Puede que mis pies ardan dia tras dia, algunos mas duros que otros,
+pero no me detendre hasta que la muerte tome mi mano para dar fin a este baile.
+</p>
+<div class="info">
+    <button type="button" class="printButton">Imprimir</button>
+</div>
+</article>
+
+    </div>
+</main>
+
+<script>
+    document.getElementById("regresar").addEventListener("click", function(event) {
+        event.preventDefault();
+        window.location.href = "l-emp.html";
+    });
+
+    document.querySelectorAll(".printButton").forEach(button => {
+        button.addEventListener("click", function () {
+            let poema = this.closest(".poema-item");
+            let poemaTitulo = poema.querySelector("h1").innerHTML;
+            let poemaTexto = poema.querySelector("p").innerHTML;
+
+            let printWindow = window.open('', '', 'height=500,width=800');
+            printWindow.document.write('<html><head><title>Impresión</title><style>');
+            printWindow.document.write('body { font-family: Arial, sans-serif; text-align: center; background-color: #f0f8ff; }');
+            printWindow.document.write('h1 { color: #4b0082; }');
+            printWindow.document.write('p { color: #2c3e50; font-size: 18px; }');
+            printWindow.document.write('</style></head><body>');
+            printWindow.document.write('<h1>' + poemaTitulo + '</h1>');
+            printWindow.document.write('<p>' + poemaTexto + '</p>');
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+
+            // Espera un momento antes de abrir la ventana de impresión
+            setTimeout(() => {
+                printWindow.print();
+                printWindow.close();
+            }, 500);
+        });
+    });
+</script>
+
+</body>
+</html>
