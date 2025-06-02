@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Infografía</title>
+  <style>
+    :root {
+      --pastel-blue: #9b7aef;
+      --pastel-light-blue: #7fcfff;
+      --pastel-pink: #e589de;
+      --pastel-purple: #d878b8;
+      --text-dark: #4b3a63;
+      --text-light: #ffffff;
+      --header-bg: #6a5acd;
+      --accent: #e39cdf;
+      --card-bg: #fef6ff;
+    }
+html {
+font-size: 62.5%;
+scroll-behavior: smooth;
+scroll-padding-top: 6rem;
+}
+
+body {
+    background-image: url('image/fomin.jpg'); 
+/*background: linear-gradient(to bottom, var(--pastel-blue), var(--pastel-pink));*/
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+color: var(--text-dark);
+margin: 0;
+padding: 0;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
+
+nav{
+background-color: rgba(106, 90, 205, 0.8); /* morado semitransparente */
+  padding: 15px 30px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+}
+nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  margin: 6px 8px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1.8rem; /* Aumentado de forma moderada */
+}
+
+nav a:hover {
+  background-color: var(--pastel-purple);
+  transform: scale(1.05);
+}
+
+.lei {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 3rem;
+  color: var(--text-dark);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      margin: 15px 0 10px;
+      color: var(--header-bg);
+      font-size: 2rem;
+    }
+
+    .card p {
+      color: #333;
+      font-size: 1.4rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+<nav>
+    <div class="container1">
+<h2 class="lei">EL ENCANTO DE LAS PALABRAS</h2>
+<a href="l-index.html">Inicio</a>
+    <a href="l-descri.html">Descripción</a>
+    <a href="l-index.html">Conocenos</a>
+    <a href="l-poe.html">Poemas</a>
+    <a href="l-escri.html">Escritores</a>
+    <a href="l-contac.html">Contacto</a>
+    </div>
+</nav>
+</header>
+
+<h2 class="lei">Escritores famosos </h2>
+
+<div class="container">
+<div class="card">
+    <img src="image/wili.jpg" alt="Imagen 1">
+    <h3>William Cuthbert Faulkner</h3>
+<p>fue un escritor estadounidense, reconocido mundialmente por 
+sus novelas experimentales y galardonado con el Premio Nobel de 
+Literatura en 1949.</p>
+</div>
+
+<div class="card">
+    <img src="image/oscar.jpg" alt="Imagen 2">
+    <h3>Oscar Fingal O'Flahertie Wills Wilde</h3>
+    <p>conocido como Oscar Wilde, fue un escritor, poeta y dramaturgo 
+británico de origen irlandés.<br> Considerado uno de los dramaturgos más 
+destacados del Londres victoriano tardío. Fue una celebridad de la 
+época debido a su aguzado ingenio</p>
+</div>
+
+    <div class="card">
+    <img src="image/mari.jpg" alt="Imagen 2">
+    <h3>Mary Wollstonecraft </h3>
+    <p>fue una escritora y filósofa inglesa. Considerada una figura
+destacada del mundo moderno. Escribió novelas, cuentos, ensayos, tratados, un relato de viaje y un libro de literatura infantil.</p>
+</div>
+
+    <div class="card">
+    <img src="image/vi.jpg" alt="Imagen 2">
+    <h3>Adeline Virginia Woolf</h3>
+    <p>Fue una escritora británica, autora de novelas, cuentos, obras teatrales y demás obras literarias; considerada una de las más destacadas figuras del vanguardista modernismo anglosajón del siglo XX y del feminismo internacional.</p>
+</div>
+
+
+
+
+</div>
+
+</body>
+</html>
