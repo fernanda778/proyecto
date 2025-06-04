@@ -1,0 +1,158 @@
+:root {
+    --pastel-pink: #ffb6c1;
+    --pastel-purple: #3146e7;
+    --pastel-blue: #624b7c;
+    --pastel-green: #98effb;
+    --text-dark: #676767;
+    --text-light: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+
+header {
+    background-color: var(--pastel-blue);
+    padding: 1.5rem 9%;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    width: 100%;
+}
+/* Navbar */
+.navbar {
+    display: flex;
+    gap: 2rem;
+}
+
+header .navbar a {
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+    background-color: var(--accent); /* Color más atractivo */
+}
+
+header .navbar a:hover {
+    background-color: var(--hover-bg);
+    color:var(--pastel-pink);
+}
+.page-title {
+    font-size: 3rem;
+    color: var(--pastel-pink);
+    margin-top: 20px;
+}
+
+/* Contenedor del poema */
+.poema {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.poema h2 {
+    font-size: 2.5rem;
+    color: var(--pastel-pink);
+    margin-bottom: 20px;
+}
+
+/* Estilos para cada poema */
+.pom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.poema-item {
+    background: var(--pastel-green);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease-in-out;
+}
+
+.poema-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.poema-item h1 {
+    font-size: 1.8rem;
+    color: var(--pastel-blue);
+    margin-bottom: 10px;
+}
+
+.poema-item p {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+/* Estilos para los botones */
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info a {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 15px;
+    background: var(--pastel-pink);
+    color: var(--text-light);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background: var(--pastel-blue);
+}
+
+/* Botones de navegación */
+.btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background: var(--pastel-blue);
+    color: var(--text-light);
+    cursor: pointer;
+    margin: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: var(--pastel-green);
+}
+
+/* amo estos colores 
+:root {
+    --pastel-pink: #ffb6c1;
+    --pastel-purple: #d8bfd8;
+    --pastel-blue: #add8e6;
+    --pastel-green: #98fb98;
+    --text-dark: #4d4d4d;
+    --text-light: #ffffff;
+}*/
